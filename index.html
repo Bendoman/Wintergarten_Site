@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Wintergarten</title>
+    </head>
+    <body>
+        <div class="background" id="top-background">
+            <a id="down-arrow" href="#index-header">
+                <svg width="50" height="50" viewBox="0 0 24 24" fill="gray" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><circle cx="12" cy="12" r="10"/><polyline points="8 12 12 16 16 12"/><line x1="12" y1="8" x2="12" y2="16"/></svg>
+            </a>
+        </div>
+
+        <div class="background" id="bottom-background">
+            <h1 class="header" id="index-header">WINTERGARTEN</h1>
+
+            <div id="navbar">
+                <a href="#top-background">HOME</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="discography.html">DISCOGRAPHY</a>
+                <a href="media.html">MEDIA</a>
+                <a href="contact.html">CONTACT US</a>
+            </div>
+            
+            <div id="index-container">
+                <div id="index-container-2">
+                    <img src="images/sheetMusic.jpg" id="sheet-music" alt="Sheet music book">
+        
+                    <div id="button-container">
+                        <a href="https://wintergatan.creator-spring.com/listing/wintergatan-sheet-music-2020?product=1327" target="_blank">HARDBACK BOOK</a>
+                        <a href="https://wintergatan.net/products/wintergatan-sheet-music-collection-paperback-book" target="_blank">PAPERBACK BOOK</a>
+                        <a href="https://wintergatan.net/products/wintergatan-sheet-music-e-book" target="_blank">DIGITAL DOWNLOAD</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <p>
+                    © 2021, WINTERGARTEN
+                </p>
+            </div>
+        </div>
+
+        
+
+        <script>
+            //I'm sure there is a better way of doing this
+            var downArrow = document.getElementById("down-arrow");
+            var topBackground = document.getElementById("top-background");
+            var advertisement = document.getElementById("index-container-2");
+
+            var scrollTop = 0;
+            var brightness = 1;
+
+            window.addEventListener('scroll', function()
+            {
+                if(window.pageYOffset > scrollTop && brightness > 0.5)
+                {
+                    brightness = 1 - ((window.pageYOffset) / window.innerHeight);
+                    topBackground.style.filter = `brightness(${brightness})`;
+                }
+                else if(window.pageYOffset < scrollTop && brightness < 1)
+                {
+                    if(-((window.pageYOffset) / window.innerHeight - 1) > 0.45)
+                        brightness = -((window.pageYOffset) / window.innerHeight - 1);
+
+                    topBackground.style.filter = `brightness(${brightness})`;
+                }
+
+                scrollTop = window.pageYOffset;
+
+
+                if(window.pageYOffset < 100)
+                    downArrow.style.opacity = 1;
+                else 
+                    downArrow.style.opacity = 0;
+
+                
+
+
+                if(window.pageYOffset >= window.innerHeight - 50)
+                    advertisement.style.opacity = 1;
+                else 
+                    advertisement.style.opacity = 0;
+            });
+        </script>
+
+    </body>

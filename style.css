@@ -1,0 +1,257 @@
+@font-face {font-family: Cocomat; src: url('images/FontsFree-Net-cocomat-pro-medium.ttf');}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+}
+
+p {
+    color: navy;
+    font-family: Cocomat, Arial, Helvetica, sans-serif;
+    background-color: white;
+}
+
+iframe {
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+img {
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+a {
+    color: navy;
+    text-decoration: none;
+    font-family: Cocomat, Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    color: maroon;
+}
+
+a svg {
+    margin-right: 5px;
+}
+
+#navbar a {
+    padding: 10px;
+    background-color: white;
+    
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#contact-container a, p {
+    display: flex;
+    align-items: flex-end;
+   
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#button-container a {
+    background-color: white;
+    
+    padding: 5px;
+    margin-top: 5px;
+
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+h1 {
+    background-color: white;
+    color: navy;
+    font-family: Cocomat, Arial, Helvetica, sans-serif;
+}
+
+.header {
+    text-align: center;
+    font-size: 5em;
+    padding-top: 1%;
+}
+
+.discography-header {
+    border: 5px solid white;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#index-container {
+    display: flex;
+    justify-content: center;
+}
+
+#index-container-2 {
+    display: flex;
+    flex-direction: column;
+
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.background {
+    width: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: filter 0.35s;
+    position: relative;
+
+    animation-name: fadein;
+    animation-duration: 2.5s;
+}
+
+.footer {
+    position: absolute;
+    padding: 5px;
+    bottom: 0%;
+    background-color: white;
+    font-size: 0.75em;
+}
+
+.about-content-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+.description {
+    width: 25%;
+    margin-right: 15px;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+
+#top-background {
+    height: 100%;
+    background-image: url("images/homePageBackground.png");
+}
+
+#bottom-background {
+    height: 100%;
+    background-image: url("images/homePageBackgroundDarkened.png");
+}
+
+#down-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    margin-left: -25px; 
+    transition: opacity 0.5s;
+}
+
+#up-arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    margin-left: -25px; 
+    transition: opacity 0.5s;
+}
+
+#navbar {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+#about-background {
+    background-image: url("images/bandOnStage.png");
+    height: 100%;
+}
+
+#about-content {
+    background-image: url("images/stars.jpg");
+    padding-bottom: 100px;
+}
+
+#discography-background {
+    background-image: url("images/stars2.jpg");
+    padding-bottom: 130px;
+}
+
+#media-background {
+    background-image: url("images/stars2.jpg");
+    padding-bottom: 170px;
+}
+
+#contact-background {
+    background-image: url("images/machineSilhouette.jpg");
+    height: 100%;
+}
+
+#discography-container {
+    display: flex;
+    justify-content: center;
+}
+
+#discography-content-block {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#contact-container {
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    background-color: white;
+    border: 5px solid white;
+    border-radius: 5px;
+}
+
+#contact-content-block {
+    display: flex;
+    justify-content: center;
+}
+
+#media-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#media-content-block {
+    display: flex;
+    justify-content: center;
+}
+
+#sheet-music {
+    margin-top: 10px;
+}
+
+@keyframes fadein {
+    from{opacity: 0}
+    to{opacity: 1}
+}
+
+img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+	display: none;
+}
